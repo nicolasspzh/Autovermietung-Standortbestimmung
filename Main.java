@@ -56,7 +56,7 @@ public class Main {
                     System.out.println("Programm wird beendet.");
                     break;
                 default:
-                    System.out.println("Ungültige Eingabe. Bitte 0, 1, 2, 3 oder 4 wählen.");
+                    System.out.println("Ungültige Eingabe. Bitte 0, 1, 2 oder 3wählen.");
                     break;
             }
             System.out.println();

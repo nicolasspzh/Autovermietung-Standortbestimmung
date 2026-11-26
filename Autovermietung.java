@@ -16,20 +16,6 @@ public class Autovermietung {
             fahrzeugAusgeben(fahrzeug);
         }
     }
-
-    public void pruefeObFahrzeugVermietet() {
-        boolean mindestensEinesVermietet = false;
-        for (Fahrzeug fahrzeug : fahrzeuge) {
-            if (fahrzeug.isMietstatus()) {
-                fahrzeugAusgeben(fahrzeug);
-                mindestensEinesVermietet = true;
-            }
-        }
-        if (!mindestensEinesVermietet) {
-            System.out.println("Momentan ist kein Fahrzeug vermietet.");
-        }
-    }
-
     public Fahrzeug sucheNachKennzeichen(String kennzeichen) {
         for (Fahrzeug fahrzeug : fahrzeuge) {
             if (fahrzeug.getKennzeichen().equalsIgnoreCase(kennzeichen.trim())) {
