@@ -10,4 +10,4 @@ Zuerst habe ich Main.java aus Confluence abgeschrieben und musste jedes Wort ein
 
 Die Struktur mit Vererbung und Interface hat gut funktioniert, und das Menü läuft stabil.
 
-Fehler habe ich auch gemacht. Auto.java hatte ich zuerst nicht committet, auf GitHub kompilierte es deshalb nicht. Die Datei Versicherung.java hiess anders als das Interface darin. Kennzeichen habe ich zuerst mit == verglichen statt mit equals, und mit nextInt() wurde die nächste Eingabe übersprungen. Einmal fehlte im Konstruktor das this., dann war das Kennzeichen immer null.
+Fehler habe ich auch gemacht. Auto.j2ava hatte ich zuerst nicht committet, auf GitHub kompilierte es deshalb nicht. Die Datei Versicherung.java hiess anders als das Interface darin. Kennzeichen habe ich zuerst mit == verglichen statt mit equals, und mit nextInt() wurde die nächste Eingabe übersprungen. Einmal fehlte im Konstruktor das this., dann war das Kennzeichen immer null.
