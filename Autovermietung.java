@@ -24,7 +24,6 @@ public class Autovermietung {
         }
         return null;
     }
-
     private void fahrzeugAusgeben(Fahrzeug fahrzeug) {
         String status = fahrzeug.isMietstatus() ? "vermietet" : "frei";
         System.out.println(fahrzeug.getClass().getSimpleName()
