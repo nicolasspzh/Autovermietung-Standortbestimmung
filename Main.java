@@ -2,10 +2,10 @@ public class Main {
     public static void main(String[] args) {
         Autovermietung vermietung = new Autovermietung();
 
-        vermietung.fahrzeugHinzufuegen(new Auto("ZH 123456", 5, false, "rot", 180));
-        vermietung.fahrzeugHinzufuegen(new Auto("BE 98765", 7, false, "weiss", 170));
-        vermietung.fahrzeugHinzufuegen(new Motorrad("LU 4321", 2, false, "schwarz", 220));
-        vermietung.fahrzeugHinzufuegen(new Motorrad("SG 555", 1, false, "blau", 190));
+        vermietung.fahrzeugHinzufuegen(new Auto("ZH 123456", 5, false, "rot", 167));
+        vermietung.fahrzeugHinzufuegen(new Auto("BE 98765", 7, false, "weiss", 176));
+        vermietung.fahrzeugHinzufuegen(new Motorrad("LU 4321", 2, false, "schwarz", 267));
+        vermietung.fahrzeugHinzufuegen(new Motorrad("SG 555", 1, false, "blau", 999));
 
         java.util.Scanner scanner = new java.util.Scanner(System.in);
         boolean weiter = true;
