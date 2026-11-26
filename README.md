@@ -1,15 +1,13 @@
 # Autovermietung Standortbestimmung
 
-- Das ist mein Java-Programm für eine Autovermietung. Es läuft in der Konsole. Man kann Fahrzeuge anzeigen, mieten und zurückgeben.
+Das ist mein Java-Programm für eine Autovermietung in der Konsole. Man kann Fahrzeuge anzeigen, mieten und zurückgeben.
 
- - Das Programm hat eine abstrakte Klasse Fahrzeug. Jedes Fahrzeug hat ein Kennzeichen, Sitzplätze, eine Farbe, eine Höchstgeschwindigkeit und einen Mietstatus. Auto und Motorrad erben von Fahrzeug. Über das Interface Versicherbar muss jedes Fahrzeug seine Versicherungsprämie berechnen. Die Klasse Autovermietung speichert alle Fahrzeuge in einer ArrayList, und Main startet das Programm mit dem Menü. Am Anfang sind zwei Autos und zwei Motorräder erfasst, alle sind frei.
+Fahrzeug ist eine abstrakte Klasse, Auto und Motorrad erben davon. Über das Interface Versicherbar berechnet jedes Fahrzeug seine Versicherung. Autovermietung speichert die Fahrzeuge in einer ArrayList, Main zeigt das Menü.
 
-- Im Menü kann man mit 1 alle Fahrzeuge anzeigen, mit 2 ein Fahrzeug mieten und mit 3 ein Fahrzeug zurückgeben. Mit 0 beendet man das Programm. Mieten geht nur, wenn das Kennzeichen existiert und das Fahrzeug frei ist. Zurückgeben geht nur, wenn es vermietet ist. Bei der Suche spielt Gross- und Kleinschreibung keine Rolle, "zh 123456" findet also auch "ZH 123456". Wenn man etwas anderes eingibt, kommt "Ungültige Eingabe" und das Menü erscheint wieder.
+Mit 1 sieht man alle Fahrzeuge, mit 2 mietet man eins, mit 3 gibt man es zurück, mit 0 ist Schluss. Mieten geht nur, wenn das Fahrzeug frei ist, zurückgeben nur, wenn es vermietet ist. Gross- und Kleinschreibung beim Kennzeichen ist egal. Der Mietpreis ist 30 CHF plus 5 CHF pro Sitzplatz.
 
-- Der Mietpreis pro Tag ist 30 CHF plus 5 CHF pro Sitzplatz. Ein Auto mit 5 Sitzplätzen kostet also 55 CHF. Die Versicherung ist 200 CHF plus 0.05 CHF pro Sitzplatz. Im Moment rechnen Auto und Motorrad gleich.
+Zuerst habe ich Main.java aus Confluence abgeschrieben und musste jedes Wort einzeln ausschreiben. Martin hat mir dann gezeigt, wie es mit dem Source Root Ordner richtig geht.
 
-- Zuerst habe ich den Code von Main.java aus Confluence abgeschrieben. Das Problem war, dass ich jedes Wort einzeln ausschreiben musste. Dann habe ich Martin gefragt, und er hat mir gezeigt, wie man es richtig macht, mit dem Ordner als Source Root.
+Die Struktur mit Vererbung und Interface hat gut funktioniert, und das Menü läuft stabil.
 
-- Gut gegangen ist die Struktur mit Oberklasse, Vererbung und Interface. Das Menü läuft stabil, und man kann kein Fahrzeug doppelt mieten.
-
-- Ich habe aber auch Fehler gemacht. Zuerst habe ich Auto.java nicht committet. Bei mir lief alles, auf GitHub kompilierte es nicht. Jetzt schaue ich mit git status nach, ob alle Dateien dabei sind. Die Datei hiess zuerst Versicherung.java, das Interface darin aber Versicherbar. In Java muss eine public Klasse gleich heissen wie die Datei. Die Kennzeichen habe ich zuerst mit == verglichen, und die Suche fand nie etwas. Jetzt nehme ich equalsIgnoreCase. Im Menü habe ich zuerst nextInt() verwendet, dann wurde die Eingabe für das Kennzeichen übersprungen. Jetzt lese ich alles mit nextLine(). Im Konstruktor habe ich einmal das this. vergessen, und das Kennzeichen war danach immer null. Und kleine Tippfehler wie ein fehlendes Leerzeichen sehe ich oft erst, wenn ich das Programm wirklich ausführe.
+Fehler habe ich auch gemacht. Auto.java hatte ich zuerst nicht committet, auf GitHub kompilierte es deshalb nicht. Die Datei Versicherung.java hiess anders als das Interface darin. Kennzeichen habe ich zuerst mit == verglichen statt mit equals, und mit nextInt() wurde die nächste Eingabe übersprungen. Einmal fehlte im Konstruktor das this., dann war das Kennzeichen immer null.
