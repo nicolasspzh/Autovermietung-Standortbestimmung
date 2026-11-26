@@ -15,7 +15,6 @@ public class Main {
             System.out.println("1) Alle Fahrzeuge anzeigen");
             System.out.println("2) Fahrzeug mieten anhand Kennzeichen");
             System.out.println("3) Fahrzeuge zurückgeben anhand Kennzeichen");
-            System.out.println("4) Vermietete Fahrzeuge anzeigen");
             System.out.println("0) Beenden");
             System.out.println("Auswahl: ");
 
@@ -52,9 +51,6 @@ public class Main {
                     }
                     break;
                 }
-                case "4":
-                    vermietung.pruefeObFahrzeugVermietet();
-                    break;
                 case "0":
                     weiter = false;
                     System.out.println("Programm wird beendet.");
