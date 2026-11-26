@@ -13,5 +13,3 @@
 - Gut gegangen ist die Struktur mit Oberklasse, Vererbung und Interface. Das Menü läuft stabil, und man kann kein Fahrzeug doppelt mieten.
 
 - Ich habe aber auch Fehler gemacht. Zuerst habe ich Auto.java nicht committet. Bei mir lief alles, auf GitHub kompilierte es nicht. Jetzt schaue ich mit git status nach, ob alle Dateien dabei sind. Die Datei hiess zuerst Versicherung.java, das Interface darin aber Versicherbar. In Java muss eine public Klasse gleich heissen wie die Datei. Die Kennzeichen habe ich zuerst mit == verglichen, und die Suche fand nie etwas. Jetzt nehme ich equalsIgnoreCase. Im Menü habe ich zuerst nextInt() verwendet, dann wurde die Eingabe für das Kennzeichen übersprungen. Jetzt lese ich alles mit nextLine(). Im Konstruktor habe ich einmal das this. vergessen, und das Kennzeichen war danach immer null. Und kleine Tippfehler wie ein fehlendes Leerzeichen sehe ich oft erst, wenn ich das Programm wirklich ausführe.
-
-- Starten kann man das Programm mit javac *.java und danach java Main.
